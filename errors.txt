@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/gui.rpy", line 91: expected expression
+    define gui.main_menu_background =
+                                     ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Wed Feb 19 13:34:16 2025
