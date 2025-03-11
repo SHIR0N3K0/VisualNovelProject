@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 91: expected expression
-    define gui.main_menu_background =
-                                     ^
+File "game/gui.rpy", line 124: expected statement.
+    0define gui.namebox_borders = Borders(5, 5, 5, 5)
+               ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Feb 19 13:34:16 2025
+Tue Mar 11 16:12:50 2025
