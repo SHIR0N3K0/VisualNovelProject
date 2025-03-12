@@ -154,14 +154,14 @@ label start:
     ".{w=1.0}.{w=1.0}."
     show lala smile2
     lala "So, aren't you gonna present yourself ?"
-    show lala smile1
+    show lala smile
     you "My name ?"
     you "What was my name again ?"
     $ name = renpy.input("What is your name ?")
     $ name = name.strip().capitalize()
     show lala smile2
     lala "So ?"
-    show lala smile1
+    show lala smile
     you "Yhea, sorry my name is [name]"
     show lala smile2
     lala "Ok [name], can i ask you why you are sleeping here ?"
@@ -234,7 +234,7 @@ label Question:
                 hide lala with dissolve
                 $ player_trust += 2
                 world "Player trust +2, actual player trust = [player_trust]"
-                show lala surprised blush
+                show lala surprisedblush
                 lala "Thanks"
                 lala "Now come behing me"
                 show lala annoyed
@@ -474,7 +474,7 @@ label NormalEnd:
     scene bgdonjon escape with dissolve
     play music "Sound/IG Song.mp3" fadeout 0.5 fadein 0.5 volume 0.5 loop
     show lala happy2
-    lala "[Evan] here's the exit"
+    lala "[name] here's the exit"
     show lala happy1
     you "Yes ..."
     show lala surprised
@@ -484,14 +484,14 @@ label NormalEnd:
             "Yhea, everithing is okay. Thanks":
                 show lala happy2
                 unknown "No problem i was happy to help goodbye"
-                show lala happy
+                show lala happy1
                 you "ah..."
                 show lala happy2
-                lala "[] you want something ?"
+                lala "[name] you want something ?"
                 show lala happyblush
                 you "No it's okay bye"
                 
-            "Can we stay together ?" if flag_q1 != "2":
+            "Can we stay together ?":
                 show lala smile2
                 lala "Sorry i still have things to do"
                 show lala smile
@@ -503,7 +503,7 @@ label NormalEnd:
                 show lala happy1
                 lala "Hum"
     hide lala with dissolve
-    "Normal End"
+    "End"
     return
 label BadEnd:
     stop music
@@ -520,12 +520,13 @@ label GoodEnd:
     image bgdonjon goodend = im.FactorScale("bgdonjon goodend.png", 1.1)
     scene bgdonjon goodend with dissolve
     show lala happy2
-    lala "[Evan] here's the exit"
+    lala "[name] here's the exit"
     show lala happyblush
     you "Yes ..."
     show lala surprisedblush
     lala "Are you okay ?"
-    "Yhea, everithing is okay. Thanks"
+    you "Yhea, everithing is okay."
+    you "Thanks"
     show lala happy2
     unknown "No problem i was happy to help"
     show lala smileblush2
@@ -533,24 +534,26 @@ label GoodEnd:
     show lala surprisedblush
     pause 0.5
     show lala surprisedblush2
+    pause 0.5
     lala "Are you serious ?"
     menu:
         "Yes":
             show lala smileblush2
-            pause 0.2
+            pause 0.5
             show lala calmblush2
-            pause 0.2
+            pause 0.5
             show lala smileblush2
+            "Good End"
                         
         "No":
             show lala shoked
-            lala "Am i funny to you"
+            lala "Am i funny to you ?"
             show lala angry
-            lala "go die"
+            lala "Go die"
             show lala sad
             pause 2.0
             hide lala with dissolve
             "GO DIE YOU JERK!!!"
+            "Jerk End"
                     
-    "Good End"
     return
