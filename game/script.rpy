@@ -483,7 +483,7 @@ label NormalEnd:
     menu: #menu de choix  
             "Yhea, everithing is okay. Thanks":
                 show lala happy2
-                unknown "No problem i was happy to help goodbye"
+                lala "No problem i was happy to help goodbye"
                 show lala happy1
                 you "ah..."
                 show lala happy2
@@ -528,7 +528,7 @@ label GoodEnd:
     you "Yhea, everithing is okay."
     you "Thanks"
     show lala happy2
-    unknown "No problem i was happy to help"
+    lala "No problem i was happy to help"
     show lala smileblush2
     you "Can..{w=0.5}Can i stay with you a bit longueur ?"
     show lala surprisedblush
